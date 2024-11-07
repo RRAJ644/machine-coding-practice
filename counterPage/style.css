@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+}
+
+header {
+  margin-top: 4rem;
+  margin-left: 4rem;
+}
+
+
+main {
+  margin-top: 0.6rem;
+  margin-left: 4rem;
+}
+
+h1{
+  font-weight: 400;
+  font-size: 60px;
+  color: white;
+}
+
+#count{
+  font-weight: 300;
+  font-size: 18px;
+  color: lightgray;
+  margin: 0.7rem 0;
+}
+
+hr{
+  width: 12.3rem;
+  margin: 0.8rem 0;
+}
+
+#error{
+  display: none;
+  color: red;
+  margin: 1.5rem 0;
+}
+
+#buttons{
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.btn{
+  border-radius: 0px;
+  border: 1px solid lightgray;
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.btn-black {
+  background-color: black;
+  color: white;
+
+}
+
+
+@media (max-width:900px) {
+  main, header {
+    margin-left: 1.2rem;
+  }
+
+}

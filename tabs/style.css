@@ -1,0 +1,23 @@
+.tab-content{
+  display: none;
+}
+
+.tab-links{
+  background-color: #f2f2f2;
+  padding: 10px 20px;
+  border: 1px solid #cccc;
+  cursor: pointer;
+}
+
+.tab-links:hover{
+  background-color: #ddd;
+}
+
+.tab-links.active{
+  background-color: #dddd;
+  color: #3333;
+}
+
+.tab-content.active{
+  display: block;
+}
