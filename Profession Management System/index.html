@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profession Management System</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>New Employees </h1>
+  </header>
+
+  <form id="employeeForm">
+
+    <div class="input-row">
+
+      <div class="input-group">
+        <label for="name"> Enter Name</label>
+        <input type="text" id="name">
+      </div>
+
+      <div class="input-group">
+        <label for="name"> Enter Profession</label>
+        <input type="text" id="profession">
+      </div>
+
+      <div class="input-group">
+        <label for="name"> Enter Age</label>
+        <input type="number" id="age">
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button id="add-btn" type="button">Add User</button>
+    </div>
+
+  </form>
+
+  <section id="employees-list">
+
+    <p class="error">Error : Please Make sure All the fields are filled before adding in an employee !</p>
+
+    <p class="success">Success : Employee Added!</p>
+
+    <h3 id="added">Added Employees</h3>
+
+
+    <div id="employees"></div>
+
+    <h3 id="statement">You have 0 Employees.</h3>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: black;
+  color: white;
+  max-width: 1800px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+
+}
+
+header{
+  margin: 2rem 0;
+}
+
+#employeeForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.input-row{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label{
+  font-size: 1rem;
+}
+
+input{
+  width: 30rem;
+  height: 3rem;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2%;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.button-row{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.button-row button {
+  width: 12rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background: #fff;
+}
+
+#employees-list {
+  margin-top: 1rem;
+}
+
+.error{
+  color: red;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+.success{
+  color:  #43FF78;
+  display: none;
+  font-size: 1.2rem;
+}
+
+#added{
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+#statement{
+  font-weight: 200;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+#employees {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-container{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.employee-data {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  padding: 1rem;
+  width: 32rem;
+  margin: 1rem 0;
+  gap: 3rem;
+}
+
+.delete-btn {
+  color: #000;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 4rem;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+}
