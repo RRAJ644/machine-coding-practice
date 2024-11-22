@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#search-area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  width: 76rem;
+  height: 4rem;
+  font-size: 2rem;
+  outline: none;
+  padding-left: 1rem;
+
+}
+
+input::placeholder{
+  color: #000;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+button {
+  background: #000000;
+  color: #FFFFFF;
+  border: none;
+  Width: 10rem;
+  height: 4rem;
+  font-size: 1.5rem;
+}
+
+#portal-container{
+    border: 1px solid green;
+    width: 100vw;
+    background: #CDCDCD;
+    flex: 1;
+
+}
