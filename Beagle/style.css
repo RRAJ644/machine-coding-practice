@@ -33,6 +33,7 @@ main{
 .container-desc{
   width: 100%;
   font-weight: 100;
+  font-size: 1.2rem;
 }
 
 .detail-list{
