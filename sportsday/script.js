@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000)
   }
 
-  const LongJump = () => {
+  const LongJump = (callback) => {
     console.log('\nEvent: Long Jump')
 
     const colors = Object.keys(scores)
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000)
   }
 
-  const HighJump = () => {
+  const HighJump = (callback) => {
     console.log('\nEvent: High Jump')
     setTimeout(() => {
       const userInput = prompt(
@@ -77,4 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(`${index + 1}. ${color}: ${score} points`)
     })
   }
+
+  OpeningCeremony(Race100M)
 })
