@@ -29,7 +29,6 @@ const PromiseAPI3 = () => {
   })
 }
 
-// Function to create and append a table to the DOM
 const displayDataInTable = (data, title) => {
   const dataDisplay = document.getElementById('dataDisplay')
 
@@ -42,7 +41,6 @@ const displayDataInTable = (data, title) => {
   const tableHead = document.createElement('thead')
   const tableBody = document.createElement('tbody')
 
-  // Dynamically create table headers from the keys of the first object
   const headers = Object.keys(data[0] || {})
   const headerRow = document.createElement('tr')
   headers.forEach((header) => {
@@ -69,12 +67,11 @@ const displayDataInTable = (data, title) => {
   dataDisplay.appendChild(tableContainer)
 }
 
-// Event listener for button click
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('fetchDataBtn')
 
   button.addEventListener('click', () => {
-    button.disabled = true // Disable the button during the process
+    button.disabled = true 
 
     PromiseAPI1()
       .then(({ data, title }) => {
