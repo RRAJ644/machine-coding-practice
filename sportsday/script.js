@@ -11,7 +11,7 @@ const OpeningCeremony = (callback) => {
   setTimeout(() => {
     console.log("Let's the games begin!")
     callback(Race100M)
-  }, 1000)
+  }, 3000)
 }
 
 const Race100M = (callback) => {
@@ -46,7 +46,7 @@ const LongJump = () => {
 
   setTimeout(() => {
     callback(HighJump)
-  }, 1000)
+  }, 2000)
 }
 
 const HighJump = () => {
