@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('form') // Parent form
-  const emailInput = document.querySelector('#email')
-  const passwordInput = document.querySelector('#password')
+  let emailInput = document.querySelector('#email')
+  let passwordInput = document.querySelector('#password')
   const p1 = document.querySelector('#para1')
   const p2 = document.querySelector('#para2')
   const success = document.querySelector('.success')
   const submitBtn = document.querySelector('.submit')
 
-  // Validation function
   const validateInputs = () => {
     const email = emailInput.value
     const password = passwordInput.value
@@ -37,11 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return isValid
   }
 
-  form.addEventListener('input', (e) => {
-    const target = e.target
-    if (target === emailInput || target === passwordInput) {
-      validateInputs()
-    }
+  emailInput.addEventListener('input', () => {
+    validateInputs()
+  })
+
+  passwordInput.addEventListener('input', () => {
+    validateInputs()
   })
 
   submitBtn.addEventListener('click', (e) => {
@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isValid) {
       confirm('Are you sure you want to submit?')
       confirm('Successful signup!')
+      emailInput.value = ''
+      passwordInput.value = ''
+      success.style.display = 'none'
     }
   })
 })
