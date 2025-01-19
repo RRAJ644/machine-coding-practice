@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
+.todo-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputs-container{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px solid black;
+}
+
+input , select, button{
+  width: 25rem;
+  height: 3rem;
+}
+
