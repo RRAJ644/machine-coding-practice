@@ -4,61 +4,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Food Odering System</title>
+  <link rel="shortcut icon" href="img/My LOGO.jpg" type="image/x-icon">
+
+  <!-- Google Font is liked here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Css is liked here -->
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
-  <main class="main-container">
-    <nav class="navbar">
-
-    </nav>
-    <div class="data-container">
-
-      <aside class="sidebar">
-        <!-- logo -->
-        <div class="middle-sections logo-container">
-          <img src="./assets/logo.png">
-          <h3>Your Restaurant Menu</h3>
-          <h4>Your Slogan</h4>
+  <!-- This section the Side Bar, Nav and Hero Image -->
+  <section class="main">
+    <div class="side-bar">
+      <div class="close">
+        &#10006;
+      </div>
+      <img src="./assets/logo.png" alt="logo">
+      <p class="small-heading">Your Restaurant Menu</p>
+      <p class="slogan">Your Slogan</p>
+      <hr>
+      <div class="quick-links">
+        <p class="small-heading mar-bottom">Quick Links</p>
+        <ul>
+          <li><a href="">1. Home</a></li>
+          <li><a href="">2. Your Order</a></li>
+          <li><a href="">3. Wallet</a></li>
+          <li><a href="">4. Profile</a></li>
+          <li><a href="">5. Logout</a></li>
+          <li onclick="secondScreen()"><a>6. Menu/secondScreen</a></li>
+        </ul>
+      </div>
+      <hr>
+      <div class="more-about-us">
+        <p class="small-heading mar-bottom">More About Us</p>
+        <ul>
+          <li><a href="">1. Our Blog</a></li>
+          <li><a href="">2. Upcoming Dishes</a></li>
+          <li><a href="">3. Our Story</a></li>
+          <li><a href="">4. Social Media Links</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="nav-element">
+        <div class="hamburger">
+          <div class="open">
+            &#9776;
+          </div>
         </div>
-
-        <div class="bar"></div>
-
-        <div class="middle-sections quick-links">
-          <h3>Quick Links</h3>
-          <ol class="side-list">
-            <li>Home</li>
-            <li>Your Orders</li>
-            <li>Wallet</li>
-            <li>Profile</li>
-            <li>Logout</li>
-
-          </ol>
+        <div class="search">
+          <form>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search Food Item">
+          </form>
         </div>
+        <button class="red-btn signup">Signup</button>
+        <button class="red-btn">Login</button>
+        <img src="./assets/logo.png" alt="" class="small-logo">
+      </div>
+      <div class="helping-class">
 
-        <div class="bar"></div>
+      </div>
+      <div class="hero-img">
+        <img src="./assets/poster.jpg" alt="" class="main_hero_img">
+      </div>
 
-        <div class="middle-sections more-about-us">
-          <h3>More About Us</h3>
-          <ol class="side-list">
-            <li>Our blog</li>
-            <li>Upcoming Dishes</li>
-            <li>Our Story</li>
-            <li>Social Media Links</li>
-          </ol>
+      <!-- This section content the menu items -->
+      <section class="menu">
+        <p class="small-heading">Menu</p>
+        <div class="card-section">
+
         </div>
-
-      </aside>
-      <div class="product-grid">Product-grid</div>
+      </section>
 
     </div>
-  </main>
+  </section>
 
-
+  <!-- JavaScript Here -->
   <script src="./script.js"></script>
+
+  <script src="https://kit.fontawesome.com/a6110cc4e0.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
