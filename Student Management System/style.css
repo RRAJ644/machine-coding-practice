@@ -41,11 +41,12 @@ input::placeholder {
 .btns {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 25px;
 }
 
 .btn {
   width: 250px;
-  height: 40px;
+  height: 50px;
   font-size: 16px;
   background: #000;
   color: #fff;
