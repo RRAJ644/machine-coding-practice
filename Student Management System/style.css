@@ -34,7 +34,7 @@ input[type="search"] {
 input::placeholder {
   color: #000;
   font-size: 16px;
-  padding: 1rem;
+  margin-left: 40px;
 }
 
 /* Buttons */
