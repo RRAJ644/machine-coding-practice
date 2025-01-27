@@ -16,16 +16,28 @@ document.addEventListener('DOMContentLoaded', () => {
     employees.push(employee)
 
     const listItem = document.createElement('li')
-    listItem.innerHTML = `${employee.id} Name: ${employee.name} Profession: ${employee.profession} Age: ${employee.age}`
+    listItem.className = 'employee-list-item'
+
+    const employeeData = document.createElement('div')
+    employeeData.className = 'employee-item'
+    employeeData.innerHTML = `
+    <span style="margin-right: 10px;">${employee.id + 1}</span>
+    <span style="margin-right: 10px;">Name: ${employee.name}</span>
+    <span style="margin-right: 10px;">Profession: ${employee.profession}</span>
+    <span>Age: ${employee.age}</span>
+
+  `
 
     const deleteBtn = document.createElement('button')
-    deleteBtn.className = 'btn'
-    deleteBtn.textContent = 'Delete'
+    deleteBtn.className = 'delete-btn'
+    deleteBtn.textContent = 'Delete User'
     deleteBtn.addEventListener('click', () =>
       deleteEmployee(employee.id, listItem)
     )
 
+    listItem.appendChild(employeeData)
     listItem.appendChild(deleteBtn)
+
     employeeList.appendChild(listItem)
   }
 
@@ -57,6 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
       err.style.color = 'green'
 
       addEmployee(employeeCount, name, profession, age)
+
+      // Clear the input fields after adding the employee
+      document.getElementById('name').value = ''
+      document.getElementById('profession').value = ''
+      document.getElementById('age').value = ''
+
       employeeCount++
       updateEmployeeCount()
     }
