@@ -3,22 +3,19 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: #000;
+}
+
+
+.main {
+  padding: 20px;
   background-color: #CDCDCD;
 }
-
-h2 {
-  text-align: center;
-  margin-top: 20px;
-  color: #000;
+h2{
+  color: #fff;
+  margin-left: 22px;
 }
 
-/* Main container */
-.main {
-  margin: 20px;
-  padding: 10px;
-}
-
-/* Search Bar */
 .search {
   display: flex;
   justify-content: center;
