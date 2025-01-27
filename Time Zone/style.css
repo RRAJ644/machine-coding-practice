@@ -1,89 +1,113 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
   width: 100vw;
   overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.container1{
+.container1 {
   margin-left: 30px;
   padding: 20px;
+  flex-shrink: 0;
 }
 
-.container1 h2{
+.container1 h2 {
   text-align: left;
 }
 
-h2{
+h2 {
   margin: 20px auto;
   font-size: 30px;
-
 }
-.timezone{
+
+.timezone {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
   border: 1px solid;
   width: 50vw;
-  border-radius: 20px;
+
 }
-.timezone div{
+
+.timezone div {
   display: flex;
   gap: 200px;
 }
 
-/* continer 2 */
-.container2{
+.container2 {
   background-color: black;
   color: white;
   padding: 60px;
   width: 100%;
+  flex-grow: 1;
 }
-input{
+
+input {
   display: block;
   padding: 10px;
-  width: 500px;
-  border-radius: 20px;
+  width: 70%;
   border: 1px solid gray;
-
 }
-#btn{
+
+#btn {
   padding: 10px 25px;
   background-color: white;
   margin-top: 20px;
-  border-radius: 10px;
 }
 
-@media(max-width:600px){
-  body{
-      width: 400px;
+.result{
+  display: none;
+}
+
+#newTimezone{
+  display: none;
+}
+
+#error {
+  color: #E84444;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 400px;
   }
-  .container1{
-      width: 400px;
-      padding: 10px;
-      margin: 0;
-      overflow-x: hidden;
+
+  .container1 {
+    width: 400px;
+    padding: 10px;
+    margin: 0;
+    overflow-x: hidden;
   }
-  h2{
-      width: 300px;;
+
+  h2 {
+    width: 300px;
   }
-  .timezone{
-      width: 90%;
+
+  .timezone {
+    width: 90%;
   }
-  .timezone div{
-      gap: 30px;
+
+  .timezone div {
+    gap: 30px;
   }
-  .container2{
-      width: 100%;
-      overflow-x: hidden;
+
+  .container2 {
+    width: 100%;
+    overflow-x: hidden;
   }
-  input{
-      width: 80%;
+
+  input {
+    width: 80%;
   }
 }

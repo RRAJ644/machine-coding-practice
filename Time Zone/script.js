@@ -3,8 +3,7 @@ let timezone = []
 let currId = 'currTimezone'
 let newId = 'newTimezone'
 
-let lat
-let lon
+let lat, lon
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -17,7 +16,6 @@ function getLocation() {
 async function showPosition(position) {
   lat = position.coords.latitude
   lon = position.coords.longitude
-  console.log(lat, lon)
 
   try {
     let res = await fetch(
@@ -25,10 +23,8 @@ async function showPosition(position) {
     )
     let res2 = await res.json()
 
-    console.log(res2)
     if (res2.results.length) {
       timezone = res2.results[0]
-      console.log(timezone)
       displayTimezone(timezone, currId)
     } else {
       console.log('No location found')
@@ -41,37 +37,61 @@ async function showPosition(position) {
 getLocation()
 
 function displayTimezone(timezone, id) {
-  console.log(timezone, id)
   document.getElementById(id).innerHTML = `
-  <p>Name of Time Zone :-  ${timezone.timezone.name}</p>
-  <div>
-    <p>lat :-  ${timezone.lat}</p>
-    <p>Long :-  ${timezone.lon}</p>
-  </div>
-  <p>Offset STD :-  ${timezone.timezone.offset_STD}</p>
-  <p>Offset STD Seconds:-  ${timezone.timezone.offset_STD_seconds}</p>
-  <p>Offset DST :-  ${timezone.timezone.offset_DST}</p>
-
-  <p> Offset DST Seconds :-  ${timezone.timezone.offset_DST_seconds}</p>
-  <p>Country :-  ${timezone.country}</p>
-  <p>Postcode :-  ${timezone.state_code}</p>
-  <p>City :-  ${timezone.county}</p>
+    <p>Name of Time Zone :-  ${timezone.timezone.name}</p>
+    <div>
+      <p>lat :-  ${timezone.lat}</p>
+      <p>Long :-  ${timezone.lon}</p>
+    </div>
+    <p>Offset STD :-  ${timezone.timezone.offset_STD}</p>
+    <p>Offset STD Seconds:-  ${timezone.timezone.offset_STD_seconds}</p>
+    <p>Offset DST :-  ${timezone.timezone.offset_DST}</p>
+    <p> Offset DST Seconds :-  ${timezone.timezone.offset_DST_seconds}</p>
+    <p>Country :-  ${timezone.country}</p>
+    <p>Postcode :-  ${timezone.state_code}</p>
+    <p>City :-  ${timezone.county}</p>
   `
 }
 
 const address = document.getElementById('address')
+const resultContainer = document.getElementById('newTimezone')
+const errorMessage = document.createElement('p')
+const result = document.querySelector('.result')
+errorMessage.style.color = '#E84444'
+errorMessage.style.marginTop = '10px'
+document.querySelector('.container2').appendChild(errorMessage)
 
-document.getElementById('btn').addEventListener('click', () => {
-  console.log('add', address.value)
-  fetch(
-    `https://api.geoapify.com/v1/geocode/search?text=${encodeURIComponent(
-      address.value
-    )}&apiKey=${apiKey}`
-  )
-    .then((resp) => resp.json())
-    .then((geocodingResult) => {
+document.getElementById('btn').addEventListener('click', async () => {
+  const addressValue = address.value.trim()
+  errorMessage.textContent = '' // Clear previous errors
+  resultContainer.innerHTML = '' // Clear previous results
+  resultContainer.style.display = 'none' // Hide result container initially
+
+  if (!addressValue) {
+    errorMessage.textContent = 'Please enter an address!'
+    return
+  }
+
+  try {
+    let resp = await fetch(
+      `https://api.geoapify.com/v1/geocode/search?text=${encodeURIComponent(
+        addressValue
+      )}&apiKey=${apiKey}`
+    )
+    let geocodingResult = await resp.json()
+
+    if (geocodingResult.features && geocodingResult.features.length > 0) {
       let timezone2 = geocodingResult.features[0].properties
-      console.log('newTimezon', timezone2)
+      resultContainer.style.display = 'flex'
+      result.style.display = 'flex'
       displayTimezone(timezone2, newId)
-    })
+    } else {
+      errorMessage.textContent = 'Timezone could not be found!'
+      resultContainer.style.display = 'none'
+      result.style.display = 'none'
+    }
+  } catch (error) {
+    errorMessage.textContent = 'An error occurred. Please try again!'
+    console.error('Error fetching timezone:', error)
+  }
 })
