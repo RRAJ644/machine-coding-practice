@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Management System </title>
+  <title>Student Management System</title>
   <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <h1>Student Portal</h1>
-  </header>
+  <h2>Student Portal</h2>
 
-  <main id="portal-container">
-
-    <div id="search-area">
-      <input type="search" placeholder="Search">
-      <button>Search</button>
+  <div class="main">
+    <!-- Search bar -->
+    <div class="search">
+      <input type="search" placeholder="Search" name="search" id="search">
+      <button class="btn search-btn" onclick="search()">Search</button>
     </div>
-
-    <div id="action-buttons">
-      <button>Sort A&rarr;B</button>
-      <button>Sort Z&rarr;A</button>
-      <button>Sort By Marks</button>
-      <button>Sort By Passing</button>
-      <button>Sort By Class</button>
-      <button>Sort By Gender</button>
+    <!-- Sorting Buttons -->
+    <div class="btns">
+      <button class="btn" onclick="shortAZ()">Sort A → Z</button>
+      <button class="btn" onclick="shortZA()">Sort Z → A</button>
+      <button class="btn" onclick="marks()">Sort By Marks</button>
+      <button class="btn" onclick="passing()">Sort By Passing</button>
+      <button class="btn" onclick="clas()">Sort By Class</button>
+      <button class="btn" onclick="gender()">Sort By Gender</button>
     </div>
-
-
-    <section id="table-container">
-
-      <table class="table">
-        <thead>
-          <tr>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Gender</td>
-            <td>Class</td>
-            <td>Marks</td>
-            <td>Passing</td>
-            <td>Email</td>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-    </section>
-  </main>
+    <!-- Table -->
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Class</th>
+        <th>Marks</th>
+        <th>Passing</th>
+        <th>Email</th>
+      </tr>
+    </table>
+  </div>
 
   <script src="./script.js"></script>
 </body>
-
 </html>
+  

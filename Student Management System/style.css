@@ -1,53 +1,84 @@
-*{
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+  background-color: #CDCDCD;
 }
 
-body{
-  font-family: 'Inter', sans-serif;
-  background: black;
-  color: white;
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #000;
+}
+
+/* Main container */
+.main {
+  margin: 20px;
+  padding: 10px;
+}
+
+/* Search Bar */
+.search {
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-#search-area{
+input[type="search"] {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 4px;
+  background-color: #D9D9D9;
+  outline-style: none;
+}
+
+input::placeholder {
+  color: #000;
+  font-size: 16px;
+  padding: 1rem;
+}
+
+/* Buttons */
+.btns {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-input {
-  width: 76rem;
-  height: 4rem;
-  font-size: 2rem;
-  outline: none;
-  padding-left: 1rem;
-
-}
-
-input::placeholder{
-  color: #000;
-  font-weight: 400;
-  font-size: 2rem;
-}
-
-button {
-  background: #000000;
-  color: #FFFFFF;
+.btn {
+  width: 250px;
+  height: 40px;
+  font-size: 16px;
+  background: #000;
+  color: #fff;
   border: none;
-  Width: 10rem;
-  height: 4rem;
-  font-size: 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-#portal-container{
-    border: 1px solid green;
-    width: 100vw;
-    background: #CDCDCD;
-    flex: 1;
 
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  font-weight: 500;
+  color: #000;
+  font-size: 18px;
+}
+
+table td img {
+  border-radius: 50%;
+  margin-right: 8px;
 }
