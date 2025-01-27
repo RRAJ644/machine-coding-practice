@@ -1,130 +1,109 @@
-*{
+* {
+  background-color: black;
+  color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
-body{
-  background: black;
-  color: white;
-  max-width: 1800px;
-  margin: 0 auto;
-  font-family: 'Inter', sans-serif;
-
+body {
+  font-family: Arial, sans-serif;
+  margin: auto;
+  width: 90vw;
+  margin-top: 20px;
 }
 
-header{
-  margin: 2rem 0;
+header {
+  text-align: left;
+  margin-top:30px;
+  margin-bottom: 30px;
 }
 
-#employeeForm {
+form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
-h1 {
-  font-weight: 400;
+form>div {
+  display: flex;
+  gap: 30px;
+
 }
 
-.input-row{
+form>div>div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+
+}
+
+input, button {
+  outline: none;
+  border: 1px solid white;
+  padding: 8px;
+  height: 40px;
+}
+
+input {
+  flex-grow: 1;
+}
+
+button {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+.display-data {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+}
+
+#err {
+  color: red;
+  visibility: hidden;
+}
+
+#employeeList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 10px;
+  border: 1px solid white;
+  word-spacing: 25px;
+  border-radius: 10px;
+  margin: 10px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
-.input-group{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-label{
-  font-size: 1rem;
-}
-
-input{
-  width: 30rem;
-  height: 3rem;
-  background-color: black;
+.btn {
+  background-color: red;
   color: white;
-  border: 1px solid white;
-  border-radius: 2%;
-  font-size: 1.5rem;
-  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.button-row{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.button-row button {
-  width: 12rem;
-  height: 3rem;
-  font-size: 1.5rem;
-  background: #fff;
-}
-
-#employees-list {
-  margin-top: 1rem;
-}
-
-.error{
-  color: red;
-  font-weight: 400;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  display: none;
-}
-
-.success{
-  color:  #43FF78;
-  display: none;
-  font-size: 1.2rem;
-}
-
-#added{
-  font-weight: 400;
-  font-size: 1.2rem;
-  margin: 1rem 0;
-}
-
-#statement{
-  font-weight: 200;
-  font-size: 1.1rem;
-  margin-top: 1rem;
-}
-
-#employees {
-  display: flex;
-  flex-direction: column;
-}
-
-.employee-container{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 1rem;
-}
-
-.employee-data {
-  display: flex;
-  align-items: center;
-  border: 1px solid white;
-  padding: 1rem;
-  width: 32rem;
-  margin: 1rem 0;
-  gap: 3rem;
-}
-
-.delete-btn {
-  color: #000;
-  width: 10rem;
-  height: 3rem;
-  border-radius: 4rem;
-  font-size: 1.2rem;
-  margin-top: 0.3rem;
+.btn:hover {
+  background-color: darkred;
 }
