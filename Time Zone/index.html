@@ -4,64 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Time Zone</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>TimeZone</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <main>
-    <!-- TimeZone Section -->
-    <section class="timezone">
-      <div class="headers">
-        <h1>TimeZone API</h1>
-        <h2>Your Current Time Zone</h2>
-      </div>
+  <div class="container1">
+    <h2>TimeZone API</h2>
+    <h2>Your Current Time Zone</h2>
 
-      <!-- Time Zone Details -->
-      <div class="timezone-details">
-        <p>Name Of Time Zone:</p>
-        <p>Lat: <span id="latitude"></span> Long: <span id="longitude"></span></p>
-        <p>Offset STD:</p>
-        <p>Offset STD Seconds:</p>
-        <p>Offset DST:</p>
-        <p>Offset DST Seconds:</p>
-        <p>Country:</p>
-        <p>Postcode:</p>
-        <p>City:</p>
+    <div class="timezone" id="currTimezone">
+      <p>Name of Time Zone:</p>
+      <div>
+        <p>lat:</p>
+        <p>Long:</p>
       </div>
-    </section>
+      <p>Offset STD:</p>
+      <p>Offset STD Seconds:</p>
+      <p>Offset DST:</p>
 
-    <!-- Address Input Section -->
-    <section class="details">
-      <div class="address-area">
-        <h2>Enter Address</h2>
-        <form>
-          <label for="address">Address</label>
-          <input type="text" id="address" name="address" placeholder="Address">
-          <button type="submit">Submit</button>
-        </form>
+      <p> Offset DST Seconds: </p>
+      <p>Country:</p>
+      <p>Postcode:</p>
+      <p>City:</p>
+    </div>
+  </div>
+  <div class="container2">
+    <h2>Enter City Name</h2>
+    <input type="text" id="address" placeholder="Address">
+    <button type="submit" id="btn">Submit</button>
+    <h2>Your result</h2>
+    <div class="timezone" id="newTimezone">
+      <p>Name of Time Zone:</p>
+      <div>
+        <p>lat:</p>
+        <p>Long:</p>
       </div>
-    </section>
+      <p>Offset STD:</p>
+      <p>Offset STD Seconds:</p>
+      <p>Offset DST:</p>
 
-    <p class="error">Please enter an address!</p>
-    <section class="timezone-details result-container">
-      <h2 class="result-line">Your result</h2>
-      <div class="timezone-details result">
-        <p>Name Of Time Zone:</p>
-        <p>Lat: <span id="latitude"></span> Long: <span id="longitude"></span></p>
-        <p>Offset STD:</p>
-        <p>Offset STD Seconds:</p>
-        <p>Offset DST:</p>
-        <p>Offset DST Seconds:</p>
-        <p>Country:</p>
-        <p>Postcode:</p>
-        <p>City:</p>
-      </div>
-    </section>
-  </main>
-
-  <script src="./script.js"></script>
+      <p> Offset DST Seconds: </p>
+      <p>Country:</p>
+      <p>Postcode:</p>
+      <p>City:</p>
+    </div>
+  </div>
 </body>
-
+<script src="./script.js"></script>
 </html>
