@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            MindFuse
+        </div>
+        <ul>
+            <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../cart/cart.html"><i class="fas fa-shopping-cart"></i> MyCart</a></li>
+            <li><a href="./profile.html"><i class="fas fa-user-alt"></i> Profile</a></li>
+            <li id="logout"><a href="../login/login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+
+        </ul>
+        <div class="bars">
+            <i class="fas fa-bars" id="open"></i>
+            <i class="fas fa-times" id="close"></i>
+        </div>
+    </nav>
+    <div class="section">
+        <h2>Hello, Abhishek</h2>
+        <div class="userDetail">
+            <div>
+                <div class="flex">
+                    <label for="fname">Name</label>
+                    <input type="text" disabled placeholder="" id="fname">
+                </div>
+                <div class="flex">
+                    <label for="lname">Last Name</label>
+                    <input type="text" disabled placeholder="" id="lname">
+                </div>
+            </div>
+            <div class="flex">
+                <label for="email">Email</label>
+                <input type="email" disabled placeholder="" id="email">
+            </div>
+        </div>
+        <form action="#">
+            <h3>Change Password</h3>
+            <div class="flex">
+                <label for="oldPass">Old Password</label>
+                <input type="password" placeholder="******" id="oldPass">
+            </div>
+            <div class="flex">
+                <label for="newPass">New Password</label>
+                <input type="password" placeholder="******" id="newPass">
+            </div>
+            <button type="submit" class="btn1">Change Password</button>
+        </form>
+
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/90ab0de690.js" crossorigin="anonymous"></script>
+    <script src="./profile.js"></script>
+
+</body>
+
+</html>

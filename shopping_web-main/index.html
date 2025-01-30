@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindFuse.Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      MindFuse
+    </div>
+    <ul>
+      <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="./component/cart/cart.html"><i class="fas fa-shopping-cart"></i> MyCart</a></li>
+      <li><a href="./component/profile/profile.html"><i class="fas fa-user-alt"></i> Profile</a></li>
+      <li id="logout"><a href="./component/login/login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+
+    </ul>
+    <div class="bars">
+      <i class="fas fa-bars" id="open"></i>
+      <i class="fas fa-times" id="close"></i>
+    </div>
+  </nav>
+ <div class="container">
+  <aside>
+    <section>
+      <h2>Colors</h2>
+      <ul>
+        <li>
+          <input id="red" type="checkbox" name="color" />
+          <label for="red">Red</label>
+        </li>
+        <li>
+          <input id="blue" type="checkbox" name="color" />
+          <label for="blue">Blue</label>
+        </li>
+        <li>
+          <input id="green" type="checkbox" name="color" />
+          <label for="green">Green</label>
+        </li>
+        <li>
+          <input id="black" type="checkbox" name="color" />
+          <label for="black">Black</label>
+        </li>
+        <li>
+          <input id="white" type="checkbox" name="color" />
+          <label for="white">White</label>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Sizes</h2>
+      <ul>
+        <li>
+          <input id="s" type="checkbox" name="color" />
+          <label for="s">S</label>
+        </li>
+        <li>
+          <input id="m" type="checkbox" name="color" />
+          <label for="m">M</label>
+        </li>
+        <li>
+          <input id="l" type="checkbox" name="color" />
+          <label for="l">L</label>
+        </li>
+        <li>
+          <input id="xl" type="checkbox" name="color" />
+          <label for="xl">XL</label>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Rating</h2>
+      <input
+        type="range"
+        id="range"
+        min="0"
+        max="4"
+        value="0"
+        list="values"
+      />
+      <datalist id="values">
+        <option value="0" label="0"></option>
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5" label="5"></option>
+      </datalist>
+    </section>
+    <section>
+      <h2>Price Range</h2>
+      <ul>
+        <li>
+          <input id="0-25" type="checkbox" name="prange" />
+          <label for="0-25">$0 to $25</label>
+        </li>
+        <li>
+          <input id="25-50" type="checkbox" name="prange" />
+          <label for="25-50">$25 to $50</label>
+        </li>
+        <li>
+          <input id="50-100" type="checkbox" name="prange" />
+          <label for="50-100">$50 to $100</label>
+        </li>
+        <li>
+          <input id="100on" type="checkbox" name="prange" />
+          <label for="100on">$100 onwards</label>
+        </li>
+      </ul>
+    </section>
+  </aside>
+  <div class="main">
+
+    <div class="search">
+      <input type="search" id="searchItem" placeholder="search">
+    </div>
+    <div class="categories">
+      <button id="all">All</button>
+      <button id="mans">Mens</button>
+      <button id="womans">Womens</button>
+      <button id="jewel">Jewelery</button>
+      <button id="elect">Electronics</button>
+    </div>
+
+    <h2 class="heading">Men's Clothing</h2>
+    <div class="items" id="mansItem">
+      <div class="item">
+        <img src="/tshirt.png" alt="Item" />
+        <div class="info">
+          <h2 id="title">Mens Casual Slim Fit</h2>
+          <div class="row">
+            <div class="price">$100</div>
+            <div class="sized">S,M,L</div>
+          </div>
+          <div class="colors">
+            Colors:
+            <div class="row">
+              <div class="circle" style="background-color: #000"></div>
+              <div class="circle" style="background-color: #4938af"></div>
+              <div class="circle" style="background-color: #203d3e"></div>
+            </div>
+          </div>
+          <div class="row">Rating:</div>
+        </div>
+        <button id="addBtn">Add to Cart</button>
+      </div>
+      <div class="item">
+        <img src="/tshirt.png" alt="Item" />
+        <div class="info">
+          <h2 id="title">Mens Casual Slim Fit</h2>
+          <div class="row">
+            <div class="price">$100</div>
+            <div class="sized">S,M,L</div>
+          </div>
+          <div class="colors">
+            Colors:
+            <div class="row">
+              <div class="circle" style="background-color: #000"></div>
+              <div class="circle" style="background-color: #4938af"></div>
+              <div class="circle" style="background-color: #203d3e"></div>
+            </div>
+          </div>
+          <div class="row">Rating:</div>
+        </div>
+        <button id="addBtn">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 class="heading">Woman's Clothing</h2>
+    <div class="items" id="womanCloth">
+      <div class="item">
+        <img src="/tshirt.png" alt="Item" />
+        <div class="info">
+          <h2 id="title">Mens Casual Slim Fit</h2>
+          <div class="row">
+            <div class="price">$100</div>
+            <div class="sized">S,M,L</div>
+          </div>
+          <div class="colors">
+            Colors:
+            <div class="row">
+              <div class="circle" style="background-color: #000"></div>
+              <div class="circle" style="background-color: #4938af"></div>
+              <div class="circle" style="background-color: #203d3e"></div>
+            </div>
+          </div>
+          <div class="row">Rating:</div>
+        </div>
+        <button id="addBtn">Add to Cart</button>
+      </div>
+      <div class="item">
+        <img src="/tshirt.png" alt="Item" />
+        <div class="info">
+          <h2 id="title">Mens Casual Slim Fit</h2>
+          <div class="row">
+            <div class="price">$100</div>
+            <div class="sized">S,M,L</div>
+          </div>
+          <div class="colors">
+            Colors:
+            <div class="row">
+              <div class="circle" style="background-color: #000"></div>
+              <div class="circle" style="background-color: #4938af"></div>
+              <div class="circle" style="background-color: #203d3e"></div>
+            </div>
+          </div>
+          <div class="row">Rating:</div>
+        </div>
+        <button id="addBtn">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 class="heading">Jewelery</h2>
+    <div class="items" id="jewelery">
+
+      <div class="item">
+        <img src="/tshirt.png" alt="Item" />
+        <div class="info">
+          <h2 id="title">Mens Casual Slim Fit</h2>
+          <div class="row">
+            <div class="price">$100</div>
+            <div class="sized">S,M,L</div>
+          </div>
+          <div class="colors">
+            Colors:
+            <div class="row">
+              <div class="circle" style="background-color: #000"></div>
+              <div class="circle" style="background-color: #4938af"></div>
+              <div class="circle" style="background-color: #203d3e"></div>
+            </div>
+          </div>
+          <div class="row">Rating:</div>
+        </div>
+        <button id="addBtn">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <h2 class="heading">Electronics</h2>
+    <div class="items" id="electronics">
+      <div class="item">
+        <img src="/tshirt.png" alt="Item" />
+        <div class="info">
+          <h2 id="title">Mens Casual Slim Fit</h2>
+          <div class="row">
+            <div class="price">$100</div>
+            <div class="sized">S,M,L</div>
+          </div>
+          <div class="colors">
+            Colors:
+            <div class="row">
+              <div class="circle" style="background-color: #000"></div>
+              <div class="circle" style="background-color: #4938af"></div>
+              <div class="circle" style="background-color: #203d3e"></div>
+            </div>
+          </div>
+          <div class="row">Rating:</div>
+        </div>
+        <button id="addBtn">Add to Cart</button>
+      </div>
+      <div class="item">
+        <img src="/tshirt.png" alt="Item" />
+        <div class="info">
+          <h2 id="title">Mens Casual Slim Fit</h2>
+          <div class="row">
+            <div class="price">$100</div>
+            <div class="sized">S,M,L</div>
+          </div>
+          <div class="colors">
+            Colors:
+            <div class="row">
+              <div class="circle" style="background-color: #000"></div>
+              <div class="circle" style="background-color: #4938af"></div>
+              <div class="circle" style="background-color: #203d3e"></div>
+            </div>
+          </div>
+          <div class="row">Rating:</div>
+        </div>
+        <button id="addBtn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+ </div>
+
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/90ab0de690.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

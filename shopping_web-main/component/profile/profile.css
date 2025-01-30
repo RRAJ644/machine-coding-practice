@@ -1,0 +1,101 @@
+*{
+ font-family:Verdana, Geneva, Tahoma, sans-serif;   
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    height: 70vh;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 20px;
+    align-items: center;
+    /* justify-content: center; */
+    background-color:#3F2305;
+font-size: 20px;
+padding: 30px;
+/* align-items: center; */
+}
+.userDetail{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    /* width: 90%; */
+    margin: auto;
+}
+.userDetail input::placeholder{
+    color: rgb(246, 237, 237);
+}
+.userDetail>div{
+    display: flex;
+    gap: 10px;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+input{
+    padding: 7px 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #3F2305;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* width: 90%; */
+    gap: 20px;
+    margin: auto;
+
+}
+#email,#oldPass,#newPass{
+    width: 410px;
+}
+form .btn1{
+    background-color: #F2EAD3;
+    padding: 10px 20px;
+    color: #3F2305;
+}
+.btn1:hover{
+    background-color: aliceblue;
+}
+
+@media(max-width:1150px){
+    .userDetail>div{
+        flex-direction: column;
+    }
+    input{
+        width: 350px;
+    }
+    #email,#oldPass,#newPass{
+        width: 350px;
+    }
+    
+}
+@media(max-width:1000px){
+   
+   input, #email,#oldPass,#newPass{
+        width: 270px;
+    }
+    .btn1{
+        width: 170px;
+        font-size: 12px;
+    }
+    .section{
+        font-size: 14px;
+        width: 500px;
+    }
+}
+@media(max-width:530px){
+    .section{
+        width: 100%;
+        margin-top: 0;
+        border-radius: 0;
+    }
+}
