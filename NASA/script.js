@@ -46,7 +46,7 @@ function displayImage(data) {
         ? `<img src="${data.url}" alt="${data.title}">`
         : `<iframe src="${data.url}" frameborder="0" allowfullscreen></iframe>`
     }
-    <p>${data.explanation}</p>
+    <p class="explain">${data.explanation}</p>
   `
 }
 
